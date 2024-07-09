@@ -52,20 +52,23 @@
 
                                             <nav class="mil-footer-menu mil-mb-60">
                                                 <ul>
-                                                    <li class="mil-up mil-active">
-                                                        <a href="{% url 'home-page' %}">Home</a>
+                                                    <li class="mil-has-children mil-active">
+                                                        <a href="{% url 'home-page' %}">Homepage</a>
                                                     </li>
-                                                    <li class="mil-up">
-                                                        <a href="portfolio-1.html">Portfolio</a>
+                                                    <li class="mil-has-children">
+                                                    <a href="{% url 'portfolio-page'%}">Portfolio</a>
                                                     </li>
-                                                    <li class="mil-up">
-                                                        <a href="services.html">Services</a>
+                                                    <li class="mil-has-children">
+                                                        <a href="{% url 'service-page'%}">Services</a>
                                                     </li>
-                                                    <li class="mil-up">
-                                                        <a href="{% url 'contact-page' %}">Contact</a>
-                                                    </li>
-                                                    <li class="mil-up">
+                                                    <li class="mil-has-children">
                                                         <a href="{% url 'blog-page' %}">Blog</a>
+                                                    </li>
+                                                    <li class="mil-has-children">
+                                                        <a href="{% url 'team-page'%}">Team</a>
+                                                    </li>
+                                                    <li class="mil-has-children">
+                                                        <a href="{% url 'contact-page' %}">Contact</a>
                                                     </li>
                                                 </ul>
                                             </nav>

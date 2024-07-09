@@ -62,22 +62,22 @@
 
                             <nav class="mil-main-menu" id="swupMenu">
                                 <ul>
-                                    <li class="mil-has-children">
+                                    <li class="mil-has-children mil-active">
                                         <a href="{% url 'home-page' %}">Homepage</a>
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#.">Portfolio</a>
+                                    <a href="{% url 'portfolio-page'%}">Portfolio</a>
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#.">Services</a>
+                                        <a href="{% url 'service-page'%}">Services</a>
                                     </li>
                                     <li class="mil-has-children">
                                         <a href="{% url 'blog-page' %}">Blog</a>
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#.">Team</a>
+                                        <a href="{% url 'team-page'%}">Team</a>
                                     </li>
-                                    <li class="mil-has-children mil-active">
+                                    <li class="mil-has-children">
                                         <a href="{% url 'contact-page' %}">Contact</a>
                                     </li>
                                 </ul>

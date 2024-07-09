@@ -8,7 +8,7 @@
     <div class="alert alert-success alert-dismissible fade show" role="alert">
         <ul class="messages mb-0">
             {% for message in messages %}
-                <li>{{ message }}</li>
+                <li style="color:green; text-align:center; font-size:32px;">✅{{ message }}✅</li>
             {% endfor %}
         </ul>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -74,16 +74,16 @@
                                         <a href="{% url 'home-page' %}">Homepage</a>
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#.">Portfolio</a>
+                                    <a href="{% url 'portfolio-page'%}">Portfolio</a>
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#.">Services</a>
+                                        <a href="{% url 'service-page'%}">Services</a>
                                     </li>
                                     <li class="mil-has-children">
                                         <a href="{% url 'blog-page' %}">Blog</a>
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#.">Team</a>
+                                        <a href="{% url 'team-page'%}">Team</a>
                                     </li>
                                     <li class="mil-has-children">
                                         <a href="{% url 'contact-page' %}">Contact</a>

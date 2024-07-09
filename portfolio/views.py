@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Contact,Blog,Category
+from .models import Contact,Blog,Category,Portfolio,Team
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -7,18 +7,33 @@ from hitcount.views import HitCountDetailView
 from django.core.paginator import Paginator
 
 class BlogDetailView(HitCountDetailView):
-    model = Blog        # your model goes here
-    count_hit = True    # set to True if you want it to try and count the hit
+    model = Blog     
+    count_hit = True   
     context_object_name = 'blog'
     template_name = 'publication.html'
     slug_field = 'slug'
     
     
+def service_view(request):
+ return render(request=request,template_name='service.html')
+def team_view(request):
+    team=Team.objects.all()
+    context={
+        "team":team,
+    }
+    return render(request=request,template_name='team.html',context=context)
+
+
+
+def portfolio_view(request):
+    portfolio = Portfolio.objects.all()
+    context = {
+        
+        "portfolio":portfolio,
+    }
     
-# def blog_detail_view(request,id):
-#     blog = Blog.objects.get(id=id)
-#     context = {"blog":blog}
-#     return render(request, 'publication.html',context)
+    return render(request,'portfolio-2.html', context)
+
 
 import math
 
@@ -43,7 +58,7 @@ def home_view(request):
     # popular_blogs = Blog.objects.all().order_by('-hit_count__hits')
     popular_blogs = Blog.objects.all()
     sorted(popular_blogs,key=lambda x:x.hit_count.hits,reverse=True)
-    context = {"popular_blogs":popular_blogs}
+    context = {"popular_blogs":popular_blogs[:2],}
     return render(request,'home.html',context)
 
 
