@@ -57,10 +57,15 @@ def blog_view(request):
 def home_view(request): 
     # popular_blogs = Blog.objects.all().order_by('-hit_count__hits')
     popular_blogs = Blog.objects.all()
+    team=Team.objects.all()
     sorted(popular_blogs,key=lambda x:x.hit_count.hits,reverse=True)
-    context = {"popular_blogs":popular_blogs[:2],}
+    context = {
+        "popular_blogs":popular_blogs[:2],
+        "team":team,
+        
+        }
     return render(request,'home.html',context)
-
+    
 
 def contact_view(request):
     if request.method == 'POST':

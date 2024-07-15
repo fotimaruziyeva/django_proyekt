@@ -207,11 +207,11 @@
                                     </div>
                                 </div>
 
-                                <a href="services.html" class="mil-button mil-arrow-place mil-btn-space">
+                                <a href="{%url service-page%}" class="mil-button mil-arrow-place mil-btn-space">
                                     <span>What we do</span>
                                 </a>
 
-                                <a href="portfolio-1.html" class="mil-link mil-muted mil-arrow-place">
+                                <a href="{%url 'portfolio-page'%}" class="mil-link mil-muted mil-arrow-place">
                                     <span>View works</span>
                                 </a>
 
@@ -252,7 +252,7 @@
 
                                     <div class="mil-about-quote">
                                         <div class="mil-avatar mil-up">
-                                            <img src="img/faces/customers/2.jpg" alt="Founder">
+                                            <img src="{% static 'img/faces/customers/2.jpg'%}" alt="Founder">
                                         </div>
                                         <h6 class="mil-quote mil-up">Passionately Creating <span class="mil-thin">Design Wonders:</span> Unleashing <span class="mil-thin">Boundless Creativity</span></h6>
                                     </div>
@@ -264,7 +264,7 @@
                                 <div class="mil-about-photo mil-mb-90">
                                     <div class="mil-lines-place"></div>
                                     <div class="mil-up mil-img-frame" style="padding-bottom: 160%;">
-                                        <img src="img/photo/1.jpg" alt="img" class="mil-scale" data-value-1="1" data-value-2="1.2">
+                                        <img src="{% static 'img/photo/1.jpg'%}" alt="img" class="mil-scale" data-value-1="1" data-value-2="1.2">
                                     </div>
                                 </div>
 
@@ -294,14 +294,14 @@
 
                                 <div class="mil-complex-text justify-content-center mil-up mil-mb-15">
 
-                                    <span class="mil-text-image"><img src="img/photo/2.jpg" alt="team"></span>
+                                    <span class="mil-text-image"><img src="{% static 'img/photo/2.jpg'%}" alt="team"></span>
                                     <h2 class="mil-h1 mil-muted mil-center">Unique <span class="mil-thin">Ideas</span></h2>
 
                                 </div>
                                 <div class="mil-complex-text justify-content-center mil-up">
 
                                     <h2 class="mil-h1 mil-muted mil-center">For Your <span class="mil-thin">Business.</span></h2>
-                                    <a href="services.html" class="mil-services-button mil-button mil-arrow-place"><span>What we do</span></a>
+                                    <a href="{% url 'service-page'%}" class="mil-services-button mil-button mil-arrow-place"><span>What we do</span></a>
 
                                 </div>
                             </div>
@@ -309,7 +309,7 @@
                             <div class="row mil-services-grid m-0">
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
-                                    <a href="service.html" class="mil-service-card-sm mil-up">
+                                    <a href="{%url 'service-page'%}" class="mil-service-card-sm mil-up">
                                         <h5 class="mil-muted mil-mb-30">Branding and <br>Identity Design</h5>
                                         <p class="mil-light-soft mil-mb-30">Our creative agency is a team of professionals focused on helping your brand grow.</p>
                                         <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
@@ -318,7 +318,7 @@
                                 </div>
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
-                                    <a href="service.html" class="mil-service-card-sm mil-up">
+                                    <a href="{% url 'service-page'%}" class="mil-service-card-sm mil-up">
                                         <h5 class="mil-muted mil-mb-30">Website Design <br>and Development</h5>
                                         <p class="mil-light-soft mil-mb-30">Our creative agency is a team of professionals focused on helping your brand grow.</p>
                                         <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
@@ -327,7 +327,7 @@
                                 </div>
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
-                                    <a href="service.html" class="mil-service-card-sm mil-up">
+                                    <a href="{% url 'service-page'%}" class="mil-service-card-sm mil-up">
                                         <h5 class="mil-muted mil-mb-30">Advertising and <br>Marketing Campaigns</h5>
                                         <p class="mil-light-soft mil-mb-30">Our creative agency is a team of professionals focused on helping your brand grow.</p>
                                         <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
@@ -336,7 +336,7 @@
                                 </div>
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
-                                    <a href="service.html" class="mil-service-card-sm mil-up">
+                                    <a href="{% url 'service-page'%}" class="mil-service-card-sm mil-up">
                                         <h5 class="mil-muted mil-mb-30">Creative Consulting <br>and Development</h5>
                                         <p class="mil-light-soft mil-mb-30">Our creative agency is a team of professionals focused on helping your brand grow.</p>
                                         <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
@@ -348,8 +348,7 @@
                     </div>
                 </section>
                 <!-- services end -->
-
-                <!-- team -->
+             <!-- team -->
                 <section>
                     <div class="container mil-p-120-30">
                         <div class="row justify-content-between align-items-center">
@@ -361,7 +360,7 @@
 
                                     <p class="mil-up mil-mb-60">Together, our creative team is committed to delivering impactful work that exceeds expectations.</p>
 
-                                    <div class="mil-up"><a href="team.html" class="mil-button mil-arrow-place mil-mb-60"><span>Read more</span></a></div>
+                                    <div class="mil-up"><a href="{% url 'team-page' %}" class="mil-button mil-arrow-place mil-mb-60"><span>Read more</span></a></div>
 
                                     <h4 class="mil-up"><span class="mil-thin">We</span> delivering <br><span class="mil-thin">exceptional</span> results.</h4>
                                 </div>
@@ -374,75 +373,34 @@
 
                                     <div class="row mil-mb-60">
                                         <div class="col-sm-6">
-
+                                            {% for team in team%}
                                             <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="img/faces/1.jpg" alt="Team member">
+                                                <img src="{{team.img.url}}" alt="Team member">
                                                 <div class="mil-description">
                                                     <div class="mil-secrc-text">
-                                                        <h5 class="mil-muted mil-mb-5"><a href="home-2.html">Anna Oldman</a></h5>
-                                                        <p class="mil-link mil-light-soft mil-mb-10">Art Director</p>
-                                                        <ul class="mil-social-icons mil-center">
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-behance"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-dribbble"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-github"></i></a></li>
-                                                        </ul>
+                                                        <h5 class="mil-muted mil-mb-5"><a href="{% url 'home-page' %}">{{team.full_name}}</a></h5>
+                                                        <p class="mil-link mil-light-soft mil-mb-10">{{team.job}}</p>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="img/faces/3.jpg" alt="Team member">
-                                                <div class="mil-description">
-                                                    <div class="mil-secrc-text">
-                                                        <h5 class="mil-muted mil-mb-5"><a href="home-2.html">Oscar Freeman</a></h5>
-                                                        <p class="mil-link mil-light-soft mil-mb-10">Frontend Dev</p>
-                                                        <ul class="mil-social-icons mil-center">
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-behance"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-dribbble"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-github"></i></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            {% endfor %}
 
                                         </div>
                                         <div class="col-sm-6">
 
                                             <p class="mil-mobile-hidden mil-text-sm mil-mb-30" style="height: 30px;"><span class="mil-accent">*</span> The founders of our agency</p>
 
+                                            {% for team in team%}
                                             <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="img/faces/2.jpg" alt="Team member">
+                                                <img src="{{team.img.url}}" alt="Team member">
                                                 <div class="mil-description">
                                                     <div class="mil-secrc-text">
-                                                        <h5 class="mil-muted mil-mb-5"><a href="home-2.html">Emma Newman</a></h5>
-                                                        <p class="mil-link mil-light-soft mil-mb-10">Founder</p>
-                                                        <ul class="mil-social-icons mil-center">
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-behance"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-dribbble"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-github"></i></a></li>
-                                                        </ul>
+                                                        <h5 class="mil-muted mil-mb-5"><a href="{% url 'home-page' %}">{{team.full_name}}</a></h5>
+                                                        <p class="mil-link mil-light-soft mil-mb-10">{{team.job}}</p>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="img/faces/4.jpg" alt="Team member">
-                                                <div class="mil-description">
-                                                    <div class="mil-secrc-text">
-                                                        <h5 class="mil-muted mil-mb-5"><a href="home-2.html">Lisa Trueman</a></h5>
-                                                        <p class="mil-link mil-light-soft mil-mb-10">UI/UX Designer</p>
-                                                        <ul class="mil-social-icons mil-center">
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-behance"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-dribbble"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
-                                                            <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-github"></i></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            {% endfor %}
 
                                         </div>
                                     </div>
@@ -453,6 +411,7 @@
                         </div>
                     </div>
                 </section>
+
                 <!-- team end -->
 
                 <!-- reviews -->
@@ -551,16 +510,16 @@
                         <div class="swiper-container mil-infinite-show mil-up">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 60px;"><img src="img/partners/1.svg" alt="logo"></a>
+                                    <a href="#." class="mil-partner-frame" style="width: 60px;"><img src="{% static 'img/partners/1.svg'%}" alt="logo"></a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="img/partners/2.svg" alt="logo"></a>
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'img/partners/2.svg'%}" alt="logo"></a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 60px;"><img src="img/partners/1.svg" alt="logo"></a>
+                                    <a href="#." class="mil-partner-frame" style="width: 60px;"><img src="{% static 'img/partners/1.svg'%}" alt="logo"></a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="img/partners/2.svg" alt="logo"></a>
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'img/partners/2.svg'%}" alt="logo"></a>
                                 </div>
                             </div>
                         </div>
@@ -578,7 +537,7 @@
                             </div>
                             <div class="col-lg-6 mil-mb-30">
                                 <div class="mil-adaptive-right mil-up">
-                                    <a href="blog.html" class="mil-link mil-dark mil-arrow-place">
+                                    <a href="{% url 'blog-page'%}" class="mil-link mil-dark mil-arrow-place">
                                         <span>View all</span>
                                     </a>
                                 </div>

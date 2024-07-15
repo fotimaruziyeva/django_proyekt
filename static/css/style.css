@@ -1577,6 +1577,7 @@ menu
 .mil-main-menu ul li.mil-active > a {
   color: rgb(255, 152, 0);
 }
+
 .mil-main-menu ul li.mil-active > a:hover {
   color: rgb(255, 152, 0) !important;
   -webkit-filter: brightness(110%);
@@ -2627,34 +2628,36 @@ social icons
 .mil-social-icons {
   padding: 0;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: flex; /* Barcha prefikslarni olib tashlash */
 }
+
 .mil-social-icons.mil-center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
+
 .mil-social-icons li {
   list-style-type: none;
   margin-right: 15px;
 }
+
 .mil-social-icons li:last-child {
   margin-right: 0;
 }
+
 .mil-social-icons li a {
   color: rgb(255, 255, 255);
   font-size: 18px;
-  -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
+
 .mil-social-icons li a:hover {
   color: rgb(255, 152, 0);
 }
+
 .mil-social-icons.mil-dark li a {
   color: rgb(0, 0, 0);
 }
+
 .mil-social-icons.mil-dark li a:hover {
   color: rgb(255, 152, 0);
 }

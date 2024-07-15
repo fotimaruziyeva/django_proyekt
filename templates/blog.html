@@ -48,7 +48,7 @@
         <div class="mil-menu-frame">
             <!-- frame clone -->
             <div class="mil-frame-top">
-                <a href="home-1.html" class="mil-logo">A.</a>
+                <a href="{%url 'home-page'%}" class="mil-logo">A.</a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
@@ -98,12 +98,12 @@
                                             <h6 class="mil-muted mil-mb-30">Projects</h6>
 
                                             <ul class="mil-menu-list">
-                                                <li><a href="project-1.html" class="mil-light-soft">Interior design studio</a></li>
-                                                <li><a href="project-2.html" class="mil-light-soft">Home Security Camera</a></li>
-                                                <li><a href="project-3.html" class="mil-light-soft">Kemia Honest Skincare</a></li>
-                                                <li><a href="project-4.html" class="mil-light-soft">Cascade of Lava</a></li>
-                                                <li><a href="project-5.html" class="mil-light-soft">Air Pro by Molekule</a></li>
-                                                <li><a href="project-6.html" class="mil-light-soft">Tony's Chocolonely</a></li>
+                                                <li><a href="{%url 'portfolio-page'%}" class="mil-light-soft">Interior design studio</a></li>
+                                                <li><a href="{%url 'portfolio-page'%}" class="mil-light-soft">Home Security Camera</a></li>
+                                                <li><a href="{%url 'portfolio-page'%}" class="mil-light-soft">Kemia Honest Skincare</a></li>
+                                                <li><a href="{%url 'portfolio-page'%}" class="mil-light-soft">Cascade of Lava</a></li>
+                                                <li><a href="{%url 'portfolio-page'%}" class="mil-light-soft">Air Pro by Molekule</a></li>
+                                                <li><a href="{%url 'portfolio-page'%}" class="mil-light-soft">Tony's Chocolonely</a></li>
                                             </ul>
 
                                         </div>
@@ -155,7 +155,7 @@
         <!-- frame -->
         <div class="mil-frame">
             <div class="mil-frame-top">
-                <a href="home-1.html" class="mil-logo">A.</a>
+                <a href="{%url 'home-page'%}" class="mil-logo">A.</a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
@@ -250,7 +250,7 @@
 
                                     <ul class="mil-category-list">
                                         {% for category in categories %}
-                                        <li><a href="#">{{category.name}}</a></li>
+                                        <li><a href="?category={{category.id}}">{{category.name}}</a></li>
                                         {% endfor %}
                                         <li><a href="#" class="mil-active">All categories</a></li>
                                         
@@ -288,18 +288,9 @@
                                     {% else %}
                                     <a href="?page={{ p }}" class="mil-pagination-btn ">{{p}}</a>
                                     {% endif %}
-                                    <!-- <a href="blog-inner.html" class="mil-pagination-btn">2</a>
-                                    <a href="blog-inner.html" class="mil-pagination-btn">3</a>
-                                    <a href="blog-inner.html" class="mil-pagination-btn">4</a>
-                                    <a href="blog-inner.html" class="mil-pagination-btn">5</a> -->
+                            
                                     {% endfor %}
                                 </div>
-                                <!-- <div class="pagination">
-                                    <span class="step-links">
-                                        {% if page_obj.has_previous %}
-                                            <a href="?page=1">&laquo; first</a>
-                                            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-                                        {% endif %}
                                 
                                         <span class="current">
                                             Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
@@ -310,7 +301,7 @@
                                             <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
                                         {% endif %}
                                     </span>
-                                </div> -->
+                                </div> 
                             </div>
                         </div>
                     </div>
