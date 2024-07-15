@@ -207,7 +207,7 @@
                                     </div>
                                 </div>
 
-                                <a href="{%url service-page%}" class="mil-button mil-arrow-place mil-btn-space">
+                                <a href="{%url 'service-page'%}" class="mil-button mil-arrow-place mil-btn-space">
                                     <span>What we do</span>
                                 </a>
 
@@ -390,13 +390,13 @@
 
                                             <p class="mil-mobile-hidden mil-text-sm mil-mb-30" style="height: 30px;"><span class="mil-accent">*</span> The founders of our agency</p>
 
-                                            {% for team in team%}
+                                            {% for teams in teams%}
                                             <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="{{team.img.url}}" alt="Team member">
+                                                <img src="{{teams.img.url}}" alt="Team member">
                                                 <div class="mil-description">
                                                     <div class="mil-secrc-text">
-                                                        <h5 class="mil-muted mil-mb-5"><a href="{% url 'home-page' %}">{{team.full_name}}</a></h5>
-                                                        <p class="mil-link mil-light-soft mil-mb-10">{{team.job}}</p>
+                                                        <h5 class="mil-muted mil-mb-5"><a href="{% url 'home-page' %}">{{teams.full_name}}</a></h5>
+                                                        <p class="mil-link mil-light-soft mil-mb-10">{{teams.job}}</p>
                                                     </div>
                                                 </div>
                                             </div>
