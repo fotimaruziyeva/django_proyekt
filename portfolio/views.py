@@ -50,15 +50,28 @@ def blog_view(request):
     categories = Category.objects.all()
     popular_blogs = blogs
     sorted(popular_blogs,key=lambda x:x.hit_count.hits,reverse=True)
+    v = request.GET.get("category")
 
-    context = {"categories":categories,'popular_blogs':popular_blogs[:2],'page_obj':page_obj,'page_count':range(1,1+page_count),'page':int(page)}
+    if v:
+            v = int(v)
+            blogs = Blog.objects.filter(category_id=int(v)).order_by('-created_date')
+    else:
+            blogs = Blog.objects.all().order_by('-created_date')
+
+    context = {"categories":categories,
+               'popular_blogs':popular_blogs[:2],
+               'page_obj':page_obj,
+               'page_count':range(1,1+page_count),
+               'page':int(page),
+               'curr_category':v,
+    }
     return render(request, 'blog.html',context)
 
 def home_view(request): 
     # popular_blogs = Blog.objects.all().order_by('-hit_count__hits')
     popular_blogs = Blog.objects.all()
-    team=Team.objects.all()
-    teams=Team.objects.all()
+    team=Team.objects.all()[:2]
+    teams=list(Team.objects.all().order_by('-id')[:2][::-1])
     sorted(popular_blogs,key=lambda x:x.hit_count.hits,reverse=True)
     context = {
         "popular_blogs":popular_blogs[:2],
